@@ -19,8 +19,8 @@ docker run \
 
 user@76e2145094c8:/app$ ./docker_script_dry.sh
 ```
-# Five pid for testing visual component
-output_ttl_cond56_en
+Five pid for testing visual component
+In 'output_ttl_cond56_en' folder
 L0C04AR3P
 L0C04AKLF
 L0C04AJZ0
