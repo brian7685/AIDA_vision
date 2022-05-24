@@ -1,20 +1,19 @@
 # AIDA_vision
 ```
-docker pull brian271828/event-extraction:0.8
+docker pull brian271828/event-extraction:1.2
 ```
 
 # The input folders are
-1. LDC source data
-2. ttl folders with contains output_ttl_cond56_en,output_ttl_cond56_es,output_ttl_cond56_ru,output_ttl_cond7_en,output_ttl_cond7_es,output_ttl_cond7_ru
-3. Output ttl folder
+1. LDC source data in /input
+2. ttl folders from Columbia Text in /output/WORKING/cu_text/output/{en,es,ru}/.ttl
+3. Output ttl folders from Columbia Vision in /output/WORKING/cu_vision/output/{en,es,ru}/.ttl
 
 
-# For dry run
+# Run the docker
 ```
 docker run \
--v /home/brian/AIDA/dry_run_2021/data/LDC2021E11_AIDA_Phase_3_Practice_Topic_Source_Data_V2.0:/app/LDC_data \
--v /home/brian/AIDA/dry_run_2021/uiuc_out/0302/v3:/app/input_ttl_folder \
--v /home/brian/AIDA/docker:/app/docker_out \
+-v /home/brian/AIDA/dry_run_2021/data/LDC2021E11_AIDA_Phase_3_Practice_Topic_Source_Data_V2.0:/input \
+-v /home/brian/AIDA/dry_run_2021/docker_output:/output \
 -e CUDA_VISIBLE_DEVICES=0,1,2,3 --gpus=4 --shm-size=50gb -it [IMAGE ID] /bin/bash
 
 user@76e2145094c8:/app$ ./docker_script_dry.sh
@@ -27,13 +26,3 @@ L0C04AJZ0
 L0C04AJ15
 L0C04AHYZ
 
-# For eval
-```
-docker run \
--v /home/brian/dvmm-filler2/projects/AIDA/data/LDC2022R02_AIDA_Phase3_Evaluation_Source_Data_V1.0:/app/LDC_data \
--v /home/brian/AIDA/dry_run_2021/uiuc_out/0306/output_ttls:/app/input_ttl_folder \
--v /home/brian/AIDA/docker:/app/docker_out \
--e CUDA_VISIBLE_DEVICES=0,1,2,3 --gpus=4 --shm-size=50gb -it [IMAGE ID] /bin/bash
-
-user@76e2145094c8:/app$ ./docker_script.sh
-```
