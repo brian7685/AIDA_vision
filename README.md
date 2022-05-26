@@ -1,6 +1,6 @@
 # AIDA_vision
 ```
-docker pull brian271828/event-extraction:1.3.1
+docker pull brian271828/event-extraction:1.4
 ```
 
 # The input folders are
