@@ -1,0 +1,140 @@
+{
+"attacking": 
+	{"agent":"Conflict.Attack_Attacker",
+	"victim":"Conflict.Attack_Target",
+	"weapon":"Conflict.Attack_Instrument",
+	"place":"Conflict.Attack_Place"},
+"protesting":
+	{"agent":"Conflict.Demonstrate.MarchProtestPoliticalGathering_Demonstrator",
+	"place":"Conflict.Demonstrate.MarchProtestPoliticalGathering_Place"
+	},
+"marching":
+	{"agent":"Conflict.Demonstrate.MarchProtestPoliticalGathering_Demonstrator",
+	"place":"Conflict.Demonstrate.MarchProtestPoliticalGathering_Place"
+	},
+"interviewing":
+	{"agent":"Contact.Collaborate.Meet_Participant",
+	"interviewee":"Contact.Collaborate.Meet_Participant",
+	"place":"Contact.Collaborate.Meet_Place"
+	},
+"talking":
+	{"agent":"Contact.Collaborate.Meet_Participant",
+	"listener":"Contact.Collaborate.Meet_Participant",
+	"place":"Contact.Collaborate.Meet_Place"
+	},
+"discussing":
+	{"agent":"Contact.Collaborate.Meet_Participant",
+	"place":"Contact.Collaborate.Meet_Place"
+	},
+"gathering":
+	{"gatherers":"Contact.Collaborate.Meet_Participant",
+	"place":"Contact.Collaborate.Meet_Place"
+	},
+"calling":
+	{"agent":"Contact.CommitmentPromiseExpressIntent.Correspondence_Communicator",
+	"place":"Contact.CommitmentPromiseExpressIntent.Correspondence_Place"
+	},
+"communicating":
+	{"agent":"Contact.CommitmentPromiseExpressIntent.Correspondence_Communicator",
+	"adressee":"Contact.CommitmentPromiseExpressIntent.Correspondence_Recipient",
+	"place":"Contact.CommitmentPromiseExpressIntent.Correspondence_Place"
+	},
+"dialing":
+	{"agent":"Contact.CommitmentPromiseExpressIntent.Correspondence_Communicator",
+	"place":"Contact.CommitmentPromiseExpressIntent.Correspondence_Place"
+	},
+"phoning":
+	{"agent":"Contact.CommitmentPromiseExpressIntent.Correspondence_Communicator",
+	"place":"Contact.CommitmentPromiseExpressIntent.Correspondence_Place"
+	},
+"telephoning":
+	{"agent":"Contact.CommitmentPromiseExpressIntent.Correspondence_Communicator",
+	"place":"Contact.CommitmentPromiseExpressIntent.Correspondence_Place"
+	},
+"speaking":
+	{"agent":"Contact.MediaStatement.Broadcast_Communicator",
+	"coagent":"Contact.MediaStatement.Broadcast_Recipient",
+	"place":"Contact.MediaStatement.Broadcast_Place"
+	},
+"driving":
+	{"agent":"Movement.TransportArtifact_Transporter",
+	"item":"Movement.TransportArtifact_Vehicle"
+	},
+"boating":
+	{"boaters":"Movement.TransportArtifact_Transporter",
+	"vehicle":"Movement.TransportArtifact_Vehicle"
+	},
+"disembarking":
+	{"agent":"Movement.TransportArtifact_Transporter",
+	"vehicle":"Movement.TransportArtifact_Vehicle"
+	},
+"landing":
+	{"agent":"Movement.TransportArtifact_Transporter"
+	},
+"piloting":
+	{"agent":"Movement.TransportArtifact_Transporter"
+	},
+"steering":
+	{"agent":"Movement.TransportArtifact_Transporter",
+	"vehicle":"Movement.TransportArtifact_Vehicle"
+	},
+"taxiing":
+	{"agent":"Movement.TransportArtifact_Transporter"
+	},
+"blocking":
+	{"blocker":"Movement.TransportPerson.PreventEntry_Preventer",
+	"blocked":"Movement.TransportPerson.PreventEntry_Passenger"
+	},
+"Commuting":
+	{"traveler":"Movement.TransportPerson.SelfMotion_Transporter",
+	"vehicle":"Movement.TransportPerson.SelfMotion_Vehicle"
+	},
+"riding":
+	{"agent":"Movement.TransportPerson.SelfMotion_Transporter",
+	"vehicle":"Movement.TransportPerson.SelfMotion_Vehicle"
+	},
+"boarding":
+	{"agent":"Movement.TransportPerson.SelfMotion_Transporter",
+	"vehicle":"Movement.TransportPerson.SelfMotion_Vehicle"
+	},
+"biking":
+	{"agent":"Movement.TransportPerson.SelfMotion_Transporter"
+	},
+"paying":
+	{"agent":"Transaction.TransferMoney_Giver",
+	"seller":"Transaction.TransferMoney_Recipient",
+	"place":"Transaction.TransferMoney_Place"
+	},
+"selling":
+	{"seller":"Transaction.Transaction_Participant",
+	"buyer":"Transaction.Transaction_Participant",
+	"place":"Transaction.Transaction_Place"
+	},
+"breaking":
+	{"agent":"ArtifactExistence.DamageDestroy_DamagerDestroyer",
+    "item":"ArtifactExistence.DamageDestroy_Artifact",
+    "tool":"ArtifactExistence.DamageDestroy_Instrument",
+    "against":"ArtifactExistence.DamageDestroy_Place"
+	},
+"destroying":
+	{"agent":"ArtifactExistence.DamageDestroy_DamagerDestroyer",
+    "destroyeditem":"ArtifactExistence.DamageDestroy_Artifact",
+    "place":"ArtifactExistence.DamageDestroy_Place",
+    "tool":"ArtifactExistence.DamageDestroy_Instrument"
+	},
+"crashing":
+	{"agent":"Disaster.AccidentCrash.AccidentCrash_Vehicle",
+    "item":"Disaster.AccidentCrash.AccidentCrash_Vehicle",
+    "place":"Disaster.AccidentCrash.AccidentCrash_Place",
+    "against":"Disaster.AccidentCrash.AccidentCrash_CrashObject"
+    },
+"voting":
+	{"agent":"Government.Vote.CastVote_Voter",
+    "place":"Government.Vote.CastVote_Place"
+    },
+"detaining":
+	{"agent":"Justice.ArrestJailDetain.ArrestJailDetain_Jailer",
+    "victim":"Justice.ArrestJailDetain.ArrestJailDetain_Detainee",
+    "place":"Justice.ArrestJailDetain.ArrestJailDetain_Place"
+    }
+}
