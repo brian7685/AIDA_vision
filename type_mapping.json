@@ -1,0 +1,140 @@
+{
+"attacking": 
+	{"agent":"PER",
+	"victim":"PER",
+	"weapon":"WEA",
+	"place":"LOC"},
+"protesting":
+	{"agent":"PER",
+	"place":"LOC"
+	},
+"marching":
+	{"agent":"PER",
+	"place":"LOC"
+	},
+"interviewing":
+	{"agent":"PER",
+	"interviewee":"PER",
+	"place":"LOC"
+	},
+"talking":
+	{"agent":"PER",
+	"listener":"PER",
+	"place":"LOC"
+	},
+"discussing":
+	{"agent":"PER",
+	"place":"LOC"
+	},
+"gathering":
+	{"gatherers":"PER",
+	"place":"LOC"
+	},
+"calling":
+	{"agent":"PER",
+	"place":"LOC"
+	},
+"communicating":
+	{"agent":"PER",
+	"adressee":"PER",
+	"place":"LOC"
+	},
+"dialing":
+	{"agent":"PER",
+	"place":"LOC"
+	},
+"phoning":
+	{"agent":"PER",
+	"place":"LOC"
+	},
+"telephoning":
+	{"agent":"PER",
+	"place":"LOC"
+	},
+"speaking":
+	{"agent":"PER",
+	"coagent":"PER",
+	"place":"LOC"
+	},
+"driving":
+	{"agent":"PER",
+	"item":"VEH"
+	},
+"boating":
+	{"boaters":"PER",
+	"vehicle":"VEH"
+	},
+"disembarking":
+	{"agent":"PER",
+	"vehicle":"VEH"
+	},
+"landing":
+	{"agent":"PER"
+	},
+"piloting":
+	{"agent":"PER"
+	},
+"steering":
+	{"agent":"PER",
+	"vehicle":"VEH"
+	},
+"taxiing":
+	{"agent":"PER"
+	},
+"blocking":
+	{"blocker":"PER",
+	"blocked":"PER"
+	},
+"Commuting":
+	{"traveler":"PER",
+	"vehicle":"VEH"
+	},
+"riding":
+	{"agent":"PER",
+	"vehicle":"VEH"
+	},
+"boarding":
+	{"agent":"PER",
+	"vehicle":"VEH"
+	},
+"biking":
+	{"agent":"PER"
+	},
+"paying":
+	{"agent":"PER",
+	"seller":"PER",
+	"place":"LOC"
+	},
+"selling":
+	{"seller":"PER",
+	"buyer":"PER",
+	"place":"LOC"
+	},
+"breaking":
+	{"agent":"PER",
+    "item":"FAC",
+    "tool":"WEA",
+    "against":"LOC"
+	},
+"destroying":
+	{"agent":"PER",
+    "destroyeditem":"FAC",
+    "place":"LOC",
+    "tool":"WEA"
+	},
+"crashing":
+	{"agent":"VEH",
+    "item":"VEH",
+    "place":"LOC",
+    "against":"FAC"
+    },
+"voting":
+	{"agent":"PER",
+    "place":"LOC"
+    },
+"detaining":
+	{"agent":"PER",
+    "victim":"PER",
+    "place":"LOC"
+    }
+}
