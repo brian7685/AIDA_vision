@@ -1,17 +1,22 @@
 
 
-#echo CU ldcc convert...
+echo CU vision begin...
+
+
 # mkdir dry_jpg
 
 cd /app/swig 
 # python ldcc.py \
 # /input/data/jpg/jpg/ \
 # dry_jpg/
- 
+# $1 = /input
+# $2 = /output
+INPUT=$1
+OUTPUT=$2
 echo Create list...
 
 python create_list.py \
-/input/data/jpg \
+${INPUT}/data/jpg \
 dry_jpg.txt
 
 echo CU event predict..
@@ -30,26 +35,32 @@ python read_event_new.py \
 swig_final_dry.json \
 swig_final_dry.p
 
-sudo chmod 777 /output
-sudo chmod 777 /output/WORKING
+sudo chmod 777 ${OUTPUT}
+sudo chmod 777 ${OUTPUT}/WORKING
 
-python core_graph_21_tmp.py \
-swig_final_dry.p \
-/input/docs/parent_children.tab \
-/output/WORKING/cu_text/output/en \
-/output/WORKING/cu_vision/output/en
+if ls ${OUTPUT}/WORKING/en/ltf/* >/dev/null 2>&1; then
+    python core_graph_21_tmp.py \
+    swig_final_dry.p \
+    ${INPUT}/docs/parent_children.tab \
+    ${OUTPUT}/WORKING/cu_text/output/en \
+    ${OUTPUT}/WORKING/cu_vision/output/en
+fi
 
-python core_graph_21_tmp.py \
-swig_final_dry.p \
-/input/docs/parent_children.tab \
-/output/WORKING/cu_text/output/es \
-/output/WORKING/cu_vision/output/es
+if ls ${OUTPUT}/WORKING/es/ltf/* >/dev/null 2>&1; then
+    python core_graph_21_tmp.py \
+    swig_final_dry.p \
+    ${INPUT}/docs/parent_children.tab \
+    ${OUTPUT}/WORKING/cu_text/output/es \
+    ${OUTPUT}/WORKING/cu_vision/output/es
+fi
 
-python core_graph_21_tmp.py \
-swig_final_dry.p \
-/input/docs/parent_children.tab \
-/output/WORKING/cu_text/output/ru \
-/output/WORKING/cu_vision/output/ru
+if ls ${OUTPUT}/WORKING/ru/ltf/* >/dev/null 2>&1; then
+    python core_graph_21_tmp.py \
+    swig_final_dry.p \
+    ${INPUT}/docs/parent_children.tab \
+    ${OUTPUT}/WORKING/cu_text/output/ru \
+    ${OUTPUT}/WORKING/cu_vision/output/ru
+fi
 
 echo CU merge graph end ..
 
@@ -58,3 +69,4 @@ rm dry_jpg.txt
 rm results.json
 rm swig_final_dry.json
 rm swig_final_dry.p
+

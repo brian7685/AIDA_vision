@@ -11,12 +11,14 @@ docker pull brian271828/event-extraction:1.5
 
 # Run the docker
 ```
+INPUT=/home/brian/AIDA/dry_run_2021/data/LDC2021E11_AIDA_Phase_3_Practice_Topic_Source_Data_V2.0
+OUTPUT=/home/brian/AIDA/dry_run_2021/docker_output
 docker run \
--v /home/brian/AIDA/dry_run_2021/data/LDC2021E11_AIDA_Phase_3_Practice_Topic_Source_Data_V2.0:/input \
--v /home/brian/AIDA/dry_run_2021/docker_output:/output \
+-v ${INPUT}:/input \
+-v ${OUTPUT}:/output \
 -e CUDA_VISIBLE_DEVICES=0,1,2,3 --gpus=4 --shm-size=50gb -it [IMAGE ID] /bin/bash
 
-user@76e2145094c8:/app$ ./docker_script_dry.sh
+user@76e2145094c8:/app$ ./docker_script_dry.sh /input /output
 ```
 Five pid for testing visual component
 In 'output_ttl_cond56_en' folder
