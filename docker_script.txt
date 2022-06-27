@@ -21,8 +21,8 @@ docker run \
 
 0410e276bd50
 
-docker commit b432182becdb brian271828/event-extraction:1.5
+docker commit 4b567e2cdf4c brian271828/event-extraction:1.6
 
-docker push brian271828/event-extraction:1.5
+docker push brian271828/event-extraction:1.6
 
 /input - total 40K drwxrwxr-x 5 user user 6.0K Feb 25 09:17 . drwxr-xr-x 1 root root 77 May 24 11:50 .. -rw-rw-r-- 1 user user 17K Jan 19 12:55 README.txt drwxrwxr-x 9 user user 6.0K Apr 1 14:15 data drwxrwxr-x 2 user user 6.0K Feb 15 13:41 docs drwxrwxr-x 2 user user 6.0K Jan 15 10:48 tools -rwxr-xr-x 1 user user 1.8K Feb 15 11:32 unldcc.sh
