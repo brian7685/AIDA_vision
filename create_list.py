@@ -25,9 +25,6 @@
 # 		print('error file:', name)
 
 
-from glob import glob
-import sys
-
 import PIL
 from PIL import Image, UnidentifiedImageError
 
